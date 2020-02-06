@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Term_Deposit Prediction</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="loan.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Term_Deposit Prediction</h1>
+      <style media="screen">
+        h1{
+            color:white;
+            text-align:center;
+            background:green;
+            background-size:auto;
+          }
+    body{
+      background: cyan;
+    }
+      </style>
+
+      <form class="form-horizontal" action="/predict" method="post">
+        <div class="form-group">
+          <div class="col-xs-4">
+            <label for="Age">Age</label>
+            <input type="text" name="Age" id="Age" class="form-control" placeholder="Enter Age" required><small> Enter only integer Age values</small>
+            </div>
+            <div class="col-xs-4">
+              <label for="Job" >Job</label>
+              <select id="Job" name="Job" class="form-control">
+                    <option value="0">management</option>
+                    <option value="1">technician</option>
+                    <option value="2">entrepreneur</option>
+                    <option value="4">unknown</option>
+                    <option value="5">retired</option>
+                    <option value="6">admin</option>
+                    <option value="7">services</option>
+                    <option value="8">self</option>
+                    <option value="9">unemployed</option>
+                    <option value="10">housemaid</option>
+                    <option value="11">student</option>
+                </select>
+                </div>
+                <div class="col-xs-4">
+                  <label for="Marital" >Marital_Status</label>
+                  <select id="Marital" name="Marital" class="form-control">
+                        <option value="1">married</option>
+                        <option value="2">single</option>
+                        <option value="3">divorced</option>
+
+                    </select>
+                    </div>
+                    <div class="col-xs-4">
+                      <label for="Education" >Education</label>
+                      <select id="Education" name="Education" class="form-control">
+                            <option value="0">primary</option>
+                            <option value="1">secondary</option>
+                            <option value="2">tertiary</option>
+                            <option value="3">unknown</option>
+
+                        </select>
+                        </div>
+                        <div class="col-xs-4">
+                          <label for="default" >Default</label>
+                          <select id="default" name="default" class="form-control">
+                                <option value="0">no</option>
+                                <option value="1">yes</option>
+
+                            </select>
+                            </div>
+            <div class="col-xs-4">
+              <label for="Balance">Balance</label>
+              <input type="text" name="Balance" id="Balance" class="form-control" placeholder="Enter Balance" required><small> Enter only integer or float values</small>
+              </div>
+              <div class="col-xs-4">
+                <label for="housing" >Housing_Loan</label>
+                <select id="housing" name="housing" class="form-control">
+                      <option value="0">no</option>
+                      <option value="1">yes</option>
+
+                  </select>
+                  </div>
+                  <div class="col-xs-4">
+                    <label for="loan" >Loan</label>
+                    <select id="loan" name="loan" class="form-control">
+                          <option value="0">no</option>
+                          <option value="1">yes</option>
+
+                      </select>
+                      </div>
+                      <div class="col-xs-4">
+                        <label for="contact" >Contact</label>
+                        <select id="contact" name="contact" class="form-control">
+                              <option value="0">unknown</option>
+                              <option value="1">cellular</option>
+                              <option value="2">telephone</option>
+
+                          </select>
+                          </div>
+              <div class="col-xs-4">
+                <label for="day">Day</label>
+                <input type="text" name="day" id="day" class="form-control" placeholder="Enter Day Number" required><small> Enter(1-31)</small>
+                </div>
+                <div class="col-xs-4">
+                  <label for="month" >Month</label>
+                  <select id="month" name="month" class="form-control">
+                        <option value="1">jan</option>
+                        <option value="2">feb</option>
+                        <option value="3">mar</option>
+                        <option value="4">apr</option>
+                        <option value="5">may</option>
+                        <option value="6">jun</option>
+                        <option value="7">jul</option>
+                        <option value="8">aug</option>
+                        <option value="9">sep</option>
+                        <option value="10">oct</option>
+                        <option value="11">nov</option>
+                        <option value="12">dec</option>
+
+                    </select>
+                    </div>
+                <div class="col-xs-4">
+                  <label for="duration">Duration</label>
+                  <input type="text" name="duration" id="duration" class="form-control" placeholder="Enter Duration " required><small> Enter only in seconds</small>
+                  </div>
+                  <div class="col-xs-4">
+                    <label for="campaign">Campaign</label>
+                    <input type="text" name="campaign" id="campaign" class="form-control" placeholder="Enter Campaign Number " required><small> Enter Number of Campaign times</small>
+                    </div>
+                    <div class="col-xs-4">
+                      <label for="pdays">Days Passed</label>
+                      <input type="text" name="pdays" id="pdays" class="form-control" placeholder="Enter Days Passed " required>
+                      </div>
+                      <div class="col-xs-4">
+                        <label for="previous">Previous_Campaign</label>
+                        <input type="text" name="previous" id="previous" class="form-control" placeholder="Enter # of times previous campaign happened " required>
+                        </div>
+                  <div class="col-xs-4">
+                    <label for="poutcome" >Poutcome</label>
+                    <select id="poutcome" name="Previous_Camp_Outcome" class="form-control">
+                          <option value="0">unknown</option>
+                          <option value="1">failure</option>
+                          <option value="2">other</option>
+                          <option value="3">success</option>
+                      </select>
+                      </div><br><br>
+
+
+
+                      </div>
+
+                      <div class="col-xs-12">
+                        <button type="submit" class="btn btn-primary">Predict</button>
+                        </div>
+      </form>
+
+
+        </div>
+
+
+
+  </body>
+</html>
